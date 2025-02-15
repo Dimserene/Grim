@@ -2445,7 +2445,7 @@ pattern = '''return {n=G.UIT.ROOT, config = {align = "cm", padding = 0.03, colou
 position = 'before'
 payload = '''for i, j in ipairs(contents.buttons[1].nodes) do
     if j.config and j.config.minh then
-        j.config.minh = 1.2
+        j.config.minh = 0.6
     end
 end'''
 match_indent = true
