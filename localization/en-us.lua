@@ -833,11 +833,6 @@ return {
                     "{C:chips}+#1#{} Chips",
                 }
             },
-            card_extra_mult = {
-                text = {
-                    "{C:red}+#1#{} extra mult"
-                }
-            },
             ante_0_sticker = {
                 name = "Ante 0 Banner",
                 text = {
@@ -1023,7 +1018,7 @@ return {
                 name = "Turbo Stake",
                 text = {
                     "After defeating each",
-                    "{C:attention}Boss Blind{}, {C:purple}+150{} XP"
+                    "{C:attention}Boss Blind{}, {C:purple}+300{} XP"
                 },
             },
             stake_grm_bismuth = {

@@ -4,7 +4,7 @@
 --- PREFIX: grm
 --- MOD_AUTHOR: [mathguy]
 --- MOD_DESCRIPTION: Skill trees in Balatro! Thank you to Mr.Clover for Taiwanese Mandarin translation
---- VERSION: 1.1.0
+--- VERSION: 1.1.2
 ----------------------------------------------
 ------------MOD CODE -------------------------
 
@@ -15,7 +15,9 @@ if not IncantationAddons then
 		BulkUse = {},
 		StackingIndividual = {},
 		DividingIndividual = {},
-		BulkUseIndividual = {}
+		BulkUseIndividual = {},
+        MassUse = {},
+        MassUseIndividual = {}
 	} 
 end
 
@@ -3651,9 +3653,6 @@ SMODS.Stake {
     atlas = "stakes",
     pos = {x = 0, y = 0},
     applied_stakes = {},
-    modifiers = function()
-        G.GAME.modifiers.force_stake_xp = 150
-    end,
     colour = HEX("9260B9"),
     sticker_pos = {x = 0, y = 0},
     sticker_atlas = "stickers"
@@ -4263,7 +4262,7 @@ end
 local old_set_sprites = Card.set_sprites
 function Card:set_sprites(_center, _front)
     old_set_sprites(self, _center, _front)
-    if _center then 
+    if _center and ((_center.set == 'Skill') or (_center.name == "JollyJimball")) then 
         if _center.set then
             if self.children.center then self.children.center:remove() end
 			if _center.set == 'Joker' and not _center.unlocked and not self.params.bypass_discovery_center then 
