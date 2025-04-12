@@ -190,7 +190,7 @@ return {
                 text = {
                     "Prevents Death",
                     "if chips scored",
-                    "are at least {C:attention}85%",
+                    "are at least {C:attention}75%",
                     "of required chips",
                 }
             },
@@ -476,6 +476,30 @@ return {
                 text = {
                     "When {C:attention}Blind{} is selected,",
                     "Gain {C:blue}+1{} hand per {C:purple}100{} XP held,",
+                }
+            },
+            sk_grm_holdover_1 = {
+                name = "Holdover I",
+                text = {
+                    "Up to {C:attention}3{} unused {C:red}discards{}",
+                    "may be carried over to the",
+                    "{C:attention}next round{} at {C:attention}end of round{}",
+                    "{C:red}-1{} discards per round"
+                }
+            },
+            sk_grm_holdover_2 = {
+                name = "Holdover II",
+                text = {
+                    "Up to {C:attention}2{} unused {C:blue}hands{}",
+                    "may be carried over to the",
+                    "{C:attention}next round{} at {C:attention}end of round{}",
+                }
+            },
+            sk_grm_holdover_3 = {
+                name = "Holdover III",
+                text = {
+                    "Double caps of",
+                    "{C:purple}Holdover{} skills",
                 }
             },
             sk_cry_ace_1 = {
